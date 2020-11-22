@@ -1,0 +1,2 @@
+C:\Users\mad_d\Programming\C++\TheStory\Debug\TheStory.exe
+C:\Users\mad_d\Programming\C++\TheStory\Debug\TheStory.pdb

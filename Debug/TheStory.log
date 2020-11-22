@@ -1,0 +1,5 @@
+﻿  CGameData.cpp
+C:\Users\mad_d\Programming\C++\TheStory\CGameData.cpp(271): warning C4715: 'CGameData::IsLocationNew': not all control paths return a value
+C:\Users\mad_d\Programming\C++\TheStory\CGameData.cpp(283): warning C4715: 'CGameData::FindLocationFromChoice': not all control paths return a value
+C:\Users\mad_d\Programming\C++\TheStory\CGameData.cpp(301): warning C4715: 'CGameData::GetLocation': not all control paths return a value
+  TheStory.vcxproj -> C:\Users\mad_d\Programming\C++\TheStory\Debug\TheStory.exe
