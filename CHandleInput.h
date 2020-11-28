@@ -7,7 +7,7 @@ class CHandleInput: public CGameData
 {
 public:
 	std::string ProcessInput(const std::string& ToInt);
-	const int HandleInput();
+	const int HandleNumberInput();
 
 
 };

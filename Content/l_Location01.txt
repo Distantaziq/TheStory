@@ -1,0 +1,5 @@
+N[start]
+C[entrance], [Continue]
+C[exit], [Quit]
+T[#Welcome to The Story, %%NAME%%! Please enjoy your stay!]
+#This is a comment

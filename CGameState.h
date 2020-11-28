@@ -1,6 +1,7 @@
 #pragma once
 #include"CGameData.h"
 #include"CHandleInput.h"
+#include"CPlayer.h"
 
 class CGameData;
 
@@ -8,9 +9,8 @@ class CGameState: public CGameData
 {
 public:
 	void NextRoom(const Location& Location);
-	void HandleRooms(/*const Location& Location*/);
-	void StartGame();
-
+	void PlayerNameWrapperFunction();
+	void RunGame();
 
 
 	void ActivateExit() { _IsExitActivated = true; }

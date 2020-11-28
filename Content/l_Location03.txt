@@ -1,0 +1,4 @@
+N[room1]
+C[room2], [Go north]
+C[exit], [Exit]
+T[#You are in the first room of this story.]

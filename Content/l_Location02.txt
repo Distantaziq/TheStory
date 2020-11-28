@@ -1,0 +1,4 @@
+N[entrance]
+C[room1], [Enter]
+C[exit], [Leave]
+T[#You are leisurely walking through the forest when you spot the entrance to a cave nearby.]

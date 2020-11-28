@@ -1,0 +1,3 @@
+N[exit]
+#C[room3], [Return]
+T[#This is the exit! :o]

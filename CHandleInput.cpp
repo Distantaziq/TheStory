@@ -25,7 +25,7 @@ std::string CHandleInput::ProcessInput(const std::string& ToInt)
 	return Ret;
 }
 
-const int CHandleInput::HandleInput()
+const int CHandleInput::HandleNumberInput()
 {
 	std::cin.clear();
 	std::string UserInput{ "" };
@@ -34,7 +34,7 @@ const int CHandleInput::HandleInput()
 		std::getline(std::cin, UserInput, '\n');
 		if (UserInput == "")
 		{
-			std::cout << "Please enter a number." << std::endl;
+			std::cout << "Please enter a number!" << std::endl;
 		}
 
 	} while (UserInput == "");

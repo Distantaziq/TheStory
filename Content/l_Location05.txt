@@ -1,0 +1,5 @@
+N[room3]
+C[room2], [Go back]
+C[look], [Look at waterfall]
+C[exit], [Exit]
+T[#You are in the third room of this story. There's a nice-looking waterfall here.]
