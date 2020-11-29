@@ -38,10 +38,13 @@
 *.pdb
 *.tlog
 *.idb
-*.ilk
 *.lastbuildstate
 *.opendb
 *.db-wal
 *.db-shm
 .vs/TheStory/v16/.suo
 *.ipch
+
+Debug/
+Release/
+.vs/
