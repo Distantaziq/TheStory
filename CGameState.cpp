@@ -18,19 +18,12 @@ void CGameState::NextRoom(const Location& Location)
 		std::cout << "\nWe've been here before!";
 	}
 
+	UpdateCurrentLocation(Location);
+	DEBUG(PrintLocation(GetCurrentLocation()); );
+
 	bool IsChoiceValid{ false };
 	do
 	{
-		UpdateCurrentLocation(Location);
-		DEBUG( PrintLocation(GetCurrentLocation()); );
-		/*if (IsLocationNew(Location))
-		{
-			AddToVisitedLocations(Location);
-		}
-		else
-		{
-			std::cout << "\nWe've been here before!";
-		}*/
 		PrintTextAndChoices(Location);
 
 		if (IsExit(Location))
@@ -41,18 +34,9 @@ void CGameState::NextRoom(const Location& Location)
 
 		CHandleInput HandleInput;
 		int userInput{ HandleInput.HandleNumberInput() };
-		
-		if (userInput > 0)
+		if (userInput > 0 && CountChoices(Location) > 0)
 		{
 			--userInput;
-		}
-		else
-		{
-			std::cerr << "The input is 0" << std::endl;
-		}
-
-		if (CountChoices(Location) > 0)
-		{
 			if (userInput <= CountChoices(Location))
 			{
 				//std::cout << "You chose to " << Location.Choices[userInput].Text << std::endl;
@@ -67,6 +51,10 @@ void CGameState::NextRoom(const Location& Location)
 				continue;
 			}
 		}
+		else
+		{
+			std::cerr << "The input is 0" << std::endl;
+		}
 	} while (!IsChoiceValid);
 }
 
@@ -79,7 +67,6 @@ void CGameState::PlayerNameWrapperFunction()
 void CGameState::RunGame()
 {
 	PlayerNameWrapperFunction();
-
 	do
 	{
 		if (IsFirstRoom())

@@ -9,7 +9,7 @@
 
 std::string CHandleInput::ProcessInput(const std::string& ToInt)
 {
-	std::string Ret{ "" };
+	std::string Ret{};
 	for (int i{ 0 }; i < ToInt.length(); ++i)
 	{
 		//Since the digits 0-9 come after each other in the ASCII table
@@ -29,17 +29,18 @@ const int CHandleInput::HandleNumberInput()
 {
 	std::cin.clear();
 	std::string UserInput{ "" };
+	std::string HandledInput{};
 	do
 	{
 		std::getline(std::cin, UserInput, '\n');
-		if (UserInput == "")
+		HandledInput = ProcessInput(UserInput);
+		if (HandledInput == "0")
 		{
 			std::cout << "Please enter a number!" << std::endl;
 		}
 
-	} while (UserInput == "");
+	} while (HandledInput == "0");
 
-	std::string HandledInput{ ProcessInput(UserInput) };
 		DEBUG(std::cerr << "\n<<HandledInput: " << HandledInput << std::endl;);
 	const int Ret{ std::stoi(HandledInput) };
 	std::endl(std::cout);
